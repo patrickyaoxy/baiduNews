@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>百度新闻后台管理系统</title>
+
+    <!-- Bootstrap -->
+    <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/adminEjsCss.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<header>
+    <h2 class="container-fluid mt">百度新闻管理系统</h2>
+</header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-5 col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">新闻编辑</h3>
+                </div>
+                <div class="panel-body flh">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputUrl" class="col-sm-2 control-label">图片路径</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputUrl" placeholder="请输入图片路径(不要以 / 结尾)">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputTitle" class="col-sm-2 control-label">新闻主题</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" rows="8" id="inputTitle"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputDate" class="col-sm-2 control-label">新闻日期</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control" id="inputDate" placeholder="请输入新闻日期">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputFrom" class="col-sm-2 control-label">新闻来源</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputFrom" placeholder="请输入新闻来源">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputType" class="col-sm-2 control-label">新闻类型</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="inputType">
+                                    <option>recommend</option>
+                                    <option>baijia</option>
+                                    <option>local</option>
+                                    <option>entertainment</option>
+                                    <option>society</option>
+                                    <option>military</option>
+                                    <option>women</option>
+                                    <option>funny</option>
+                                    <option>internet</option>
+                                    <option>technology</option>
+                                    <option>life</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputTiShi" class="col-sm-2 control-label">热点提示</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="inputTiShi">
+                                    <option>lunbo</option>
+                                    <option>redian</option>
+                                    <option>normal</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2  col-sm-5 col-xs-6">
+                                <button type="button" class="btn btn-default col-xs-12" id="tijiao">添加</button>
+                            </div>
+                            <div class="col-xs-6 col-sm-5">
+                                <button type="button" class="btn  col-xs-12  btn-primary" id="xiugai">修改</button>
+                            </div>
+                            <div class="col-sm-offset-2 col-sm-5 col-xs-6">
+                                <h5 class="cg">新闻已经添加成功！！！</h5>
+                            </div>
+                            <div class="col-xs-6 col-sm-5">
+                                <h5 class="xg">新闻已经修改成功！！！</h5>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7 col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">新闻数据预览</h3>
+                </div>
+                <div class="panel-body flh">
+                    <table class="table table-bordered table-hover">
+                        <tr class="warning spe">
+                            <td>ID名称</td>
+                            <td>图片路径</td>
+                            <td>新闻主题</td>
+                            <td>新闻日期</td>
+                            <td>新闻来源</td>
+                            <td>新闻类型</td>
+                            <td>热点提示</td>
+                            <td>数据操作</td>
+                        </tr>
+                        <tbody id="shuju">
+
+                        </tbody>
+                    </table>
+                    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">删除</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h3 class="sc">确认删除此条新闻吗</h3>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal"
+                                            id="cancelDelete">取消
+                                    </button>
+                                    <button type="button" class="btn btn-primary" id="deleteThis">确认</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/jquery/dist/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/javascripts/adminEjsJs.js"></script>
+</body>
+
+</html>

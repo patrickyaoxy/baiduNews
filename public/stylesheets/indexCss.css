@@ -1,0 +1,209 @@
+/*header部分*/
+.wrap-header{
+    position: relative;
+    padding-top: 89px;
+    z-index: 100;
+}
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #3e98f0 url(/images/indexImg/newslogo.png) no-repeat;
+    background-position: center 10px;
+    background-size: 65px auto;
+    border-bottom: 1px solid #5dabf0;
+}
+.hd{height: 48px;
+    }
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.hd a {
+    width: 34px;
+    height: 100%;
+    display: inline-block;
+    background: url(/images/indexImg/iconbg.png) no-repeat;
+    background-size: auto auto;
+    background-size: 40px 500px;
+}
+
+.hd .baidu-icon {
+    background-position: center 6px;
+    margin-left: 8px;
+}
+
+.hd .profile-icon {
+    background-position: center -461px;
+    margin-left: 10px;
+}
+
+.hd .subscribe-icon {
+    background-position: center -105px;
+    margin-right: 8px;
+}
+
+.hd .search-icon {
+    background-position: center -160px;
+    margin-right: 10px;
+}
+
+/*nav部分*/
+nav {
+    background-color: #3e98f0;
+    position: relative;
+}
+
+nav .menus {
+    position: relative;
+    width:3000px;
+}
+nav .menus li {
+    position: relative;
+    margin: 0 16px;
+    height: 40px;
+    line-height: 40px;
+    float:left;
+}
+nav .menus li a{
+    white-space: nowrap;
+    height: 40px;
+    line-height: 40px;
+    color: #c2daf8;
+    font-size: 16px;
+    display: inline-block;
+    padding: 0 4px;
+
+}
+nav a:focus, a:hover {
+    text-decoration: none;
+}
+.bb {
+    color: #23527c;
+    border-bottom: 2px solid #c2daf8;
+}
+nav .lgrad{
+    position: absolute;
+    top: 0;
+    width: 42px;
+    height: 38px;
+    z-index: 1;
+    background-image: linear-gradient(to right,#3e98f0 0,#3e98f0 40%,rgba(62,152,240,0) 100%);
+}
+nav .rgrad {
+    position: absolute;
+    right: 45px;
+    top: 0;
+    width: 25px;
+    height: 38px;
+    z-index: 1;
+    background-image: linear-gradient(to right,rgba(62,152,240,0) 0,#3e98f0  100%);
+}
+nav .more {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #3e98f0;
+
+    display: block;
+    padding: 12px 17px 12px 12px;
+}
+nav .more .i {
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url(/images/indexImg/nav-arr.png) no-repeat -16px -16px;
+    background-size: auto auto;
+    background-size: 32px;
+}
+/*主体部分*/
+section{
+    position: relative;
+    width: 100%;
+}
+section .mb{
+    position: relative;
+    height: 250px;
+    background: #0c0c0c;
+}
+section .dx{
+    width: 100%;
+    height: 100%;
+}
+section .dx img{
+    width: 100%;
+    height: 100%!important;
+}
+/*标题位置*/
+section .btwz{
+    left: 20px;
+    bottom: 0;
+    text-align: left;
+    padding-bottom: 10px;
+}
+/*控件*/
+section .cont{
+    left: 85%;
+    bottom: 5px;
+    transform: scale(.7);
+    width: auto;
+    margin-left: 0;
+}
+section{display: none}
+.active1{display: block;}
+section dl{ height: 138px;
+    padding: 8px 0 10px;
+    margin: 0 17px;
+}
+section dl dt{
+    width: 35%;
+    height: 100%;
+    float: left;
+}
+section dl dt img{
+    width: 100%;
+    height: 100%;
+}
+section dl dd{float: right;
+    width: 65%;
+    padding-left: 10px;
+}
+section dl dd div{
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+}
+section dl dd p{
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+}
+section dl dd p i{
+    display: inline-block;
+    float: right;
+    font-style: normal;
+}
+section  dd  b{font-weight: normal;
+display: none}
+.redian{display: inline-block;
+border: 1px solid #ff0000;
+border-radius: 3px;
+height: 16px;
+font-size: 12px;
+line-height: 16px;
+width: 30px;
+text-align: center;
+color: red;
+margin-left: 10px}
+section dl dd p span{
+    font-size: 14px;
+    color: #c0c0c0;
+}
+
+

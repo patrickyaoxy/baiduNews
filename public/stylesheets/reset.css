@@ -1,0 +1,70 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+dt,
+li,
+input,
+form,
+button {
+	margin: 0;
+	padding: 0;
+}
+
+
+/**代表所有的元素，这样写会把所有的元素遍历一遍，损耗性能*/
+
+body {
+	font-size: 14px;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+img {
+	border: 0;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+}
+
+
+/* 因为在页面中所有超链接都没有下划线，所有额列表都不需要项目符号，所以可以统一重置*/
+
+
+/* 1)在谷歌浏览器中，支持最小字体大小是12px
+ 
+ 2)部分浏览器不支持单像素  尽可能双像素
+ 
+ 3)常用字体大小为12px/14px
+ 
+ 4)字体样式可以继承*/
